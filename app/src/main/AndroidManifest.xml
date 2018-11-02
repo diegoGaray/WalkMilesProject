@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mileston.walk.walkmilestonandroid">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name=".SignUpActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name=".activities.UpdateActivity" android:theme="@style/AppTheme.Dark"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="bc0d3f16d55fbf478967c1a1ee95896d31d868be" />
+        <activity
+            android:name="com.mileston.walk.walkmilestonandroid.activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="com.mileston.walk.walkmilestonandroid.activities.AboutActivity"
+            android:label="@string/action_about"
+            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.mileston.walk.walkmilestonandroid.activities.WalkingModesActivity"
+            android:label="@string/activity_title_walking_modes"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity" />
+        </activity>
+        <activity
+            android:name="com.mileston.walk.walkmilestonandroid.activities.DistanceMeasurementActivity"
+            android:label="@string/action_distance_measurement"
+            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+        </activity>
+        <activity android:name="com.mileston.walk.walkmilestonandroid.activities.WidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnBootCompletedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnShutdownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <!-- this is for some htc devices (and others) -->
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnPackageReplacedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.mileston.walk.walkmilestonandroid.receivers.StepCountPersistenceReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="org.secuso.privacyfriendlystepcounter.WALKING_MODE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.mileston.walk.walkmilestonandroid.receivers.WidgetReceiver" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider" />
+        </receiver>
+
+        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.MotivationAlertReceiver"/>
+        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.HardwareStepCountReceiver"/>
+
+        <service android:name="com.mileston.walk.walkmilestonandroid.services.HardwareStepCounterService" />
+        <service android:name="com.mileston.walk.walkmilestonandroid.services.MovementSpeedService" />
+        <service android:name="com.mileston.walk.walkmilestonandroid.services.AccelerometerStepDetectorService" />
+        <service
+            android:name="com.mileston.walk.walkmilestonandroid.services.HardwareStepDetectorService"
+            android:stopWithTask="false" />
+    </application>
+
+
+</manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "945017408826",
+    "firebase_url": "https://walkmilestonandroid.firebaseio.com",
+    "project_id": "walkmilestonandroid",
+    "storage_bucket": "walkmilestonandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945017408826:android:e1333820842d046c",
+        "android_client_info": {
+          "package_name": "com.mileston.walk.walkmilestonandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945017408826-jj8hukkkfqkdjok14hu238lek9nrcvje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mileston.walk.walkmilestonandroid",
+            "certificate_hash": "e476d612d3ebbe3fff7573374b5201d028c00ea3"
+          }
+        },
+        {
+          "client_id": "945017408826-0rgg6f67gt4cnli3j4sulurjn29ftt6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8V7zdV2n7oxzhnw3I0VkQF3ORyM8-4oY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945017408826-0rgg6f67gt4cnli3j4sulurjn29ftt6o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

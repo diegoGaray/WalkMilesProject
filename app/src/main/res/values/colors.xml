@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#16B195</color>
+    <color name="colorPrimaryDark">#16B195</color>
+    <color name="colorAccent">#16B195</color>
+
+    <color name="primary_splash">#4DB6AC</color>
+    <color name="primary">#16B195</color>
+    <color name="primary_dark">#009688</color>
+    <color name="primary_darker">#00796b</color>
+    <color name="accent">@android:color/white</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">@android:color/white</color>
+    <color name="backgroundlogin">#16B195</color>
+
+    <color name="blue">#303F9F</color>
+
+    <color name="accent_color">@color/blue</color>
+    <color name="statusBarColor">@color/blue</color>
+    <color name="navigationBarColor">@android:color/white</color>
+    <color name="drawerArrowColor">@android:color/white</color>
+
+    <color name="darkgrey">#757575</color>
+    <color name="transparent">#00000000</color>
+    <color name="middlegrey">#A8A8A8</color>
+    <color name="yellow">#f6d126</color>
+    <color name="green">#388E3C</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen">#026499</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen">#448bb2</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+    </array>
+
+</resources>
