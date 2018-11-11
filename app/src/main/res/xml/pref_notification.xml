@@ -38,7 +38,7 @@
             android:key="@string/pref_notification_motivation_alert_enabled"
             android:title="@string/pref_title_notification_motivation_alert_enabled" />
         <!-- default is 18:00 -->
-        <com.mileston.walk.walkmilestonandroid.preferences.TimePreference
+        <waves.token.walkmiles.preferences.TimePreference
             android:defaultValue="64800000"
             android:key="@string/pref_notification_motivation_alert_time"
             android:title="@string/pref_title_notification_motivation_alert_time" />

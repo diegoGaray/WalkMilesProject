@@ -23,5 +23,5 @@
     android:initialLayout="@layout/widget_1x1"
     android:resizeMode="horizontal"
     android:widgetCategory="home_screen"
-    android:configure="com.mileston.walk.walkmilestonandroid.activities.WidgetConfigureActivity">
+    android:configure="waves.token.walkmiles.activities.WidgetConfigureActivity">
 </appwidget-provider>

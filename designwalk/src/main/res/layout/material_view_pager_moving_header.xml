@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.github.florent37.materialviewpager.header.MaterialViewPagerImageHeader
+    <waves.token.walkmiles.header.MaterialViewPagerImageHeader
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@id/materialviewpager_imageHeader"
         android:layout_width="match_parent"

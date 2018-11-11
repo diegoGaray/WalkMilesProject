@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mileston.walk.walkmilestonandroid">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="waves.token.walkmiles">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -13,7 +14,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".activities.SplashActivity"
             android:label="@string/app_name"
@@ -31,68 +33,68 @@
             android:name="io.fabric.ApiKey"
             android:value="bc0d3f16d55fbf478967c1a1ee95896d31d868be" />
         <activity
-            android:name="com.mileston.walk.walkmilestonandroid.activities.MainActivity"
+            android:name="waves.token.walkmiles.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name="com.mileston.walk.walkmilestonandroid.activities.AboutActivity"
+            android:name="waves.token.walkmiles.activities.AboutActivity"
             android:label="@string/action_about"
-            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            android:parentActivityName="waves.token.walkmiles.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+                android:value="waves.token.walkmiles.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity"
+            android:name="waves.token.walkmiles.activities.PreferencesActivity"
             android:label="@string/action_settings"
-            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            android:parentActivityName="waves.token.walkmiles.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+                android:value="waves.token.walkmiles.activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.mileston.walk.walkmilestonandroid.activities.WalkingModesActivity"
+            android:name="waves.token.walkmiles.activities.WalkingModesActivity"
             android:label="@string/activity_title_walking_modes"
             android:configChanges="orientation|screenSize|keyboard"
-            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity">
+            android:parentActivityName="waves.token.walkmiles.activities.PreferencesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mileston.walk.walkmilestonandroid.activities.PreferencesActivity" />
+                android:value="waves.token.walkmiles.activities.PreferencesActivity" />
         </activity>
         <activity
-            android:name="com.mileston.walk.walkmilestonandroid.activities.DistanceMeasurementActivity"
+            android:name="waves.token.walkmiles.activities.DistanceMeasurementActivity"
             android:label="@string/action_distance_measurement"
-            android:parentActivityName="com.mileston.walk.walkmilestonandroid.activities.MainActivity">
+            android:parentActivityName="waves.token.walkmiles.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mileston.walk.walkmilestonandroid.activities.MainActivity" />
+                android:value="waves.token.walkmiles.activities.MainActivity" />
         </activity>
-        <activity android:name="com.mileston.walk.walkmilestonandroid.activities.WidgetConfigureActivity">
+        <activity android:name="waves.token.walkmiles.activities.WidgetConfigureActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnBootCompletedBroadcastReceiver">
+        <receiver android:name="waves.token.walkmiles.receivers.OnBootCompletedBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnShutdownBroadcastReceiver">
+        <receiver android:name="waves.token.walkmiles.receivers.OnShutdownBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
                 <!-- this is for some htc devices (and others) -->
                 <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.OnPackageReplacedBroadcastReceiver">
+        <receiver android:name="waves.token.walkmiles.receivers.OnPackageReplacedBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.mileston.walk.walkmilestonandroid.receivers.StepCountPersistenceReceiver"
+            android:name="waves.token.walkmiles.receivers.StepCountPersistenceReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -100,7 +102,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.mileston.walk.walkmilestonandroid.receivers.WidgetReceiver" >
+            android:name="waves.token.walkmiles.receivers.WidgetReceiver" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -108,14 +110,14 @@
                 android:resource="@xml/appwidget_provider" />
         </receiver>
 
-        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.MotivationAlertReceiver"/>
-        <receiver android:name="com.mileston.walk.walkmilestonandroid.receivers.HardwareStepCountReceiver"/>
+        <receiver android:name="waves.token.walkmiles.receivers.MotivationAlertReceiver"/>
+        <receiver android:name="waves.token.walkmiles.receivers.HardwareStepCountReceiver"/>
 
-        <service android:name="com.mileston.walk.walkmilestonandroid.services.HardwareStepCounterService" />
-        <service android:name="com.mileston.walk.walkmilestonandroid.services.MovementSpeedService" />
-        <service android:name="com.mileston.walk.walkmilestonandroid.services.AccelerometerStepDetectorService" />
+        <service android:name="waves.token.walkmiles.services.HardwareStepCounterService" />
+        <service android:name="waves.token.walkmiles.services.MovementSpeedService" />
+        <service android:name="waves.token.walkmiles.services.AccelerometerStepDetectorService" />
         <service
-            android:name="com.mileston.walk.walkmilestonandroid.services.HardwareStepDetectorService"
+            android:name="waves.token.walkmiles.services.HardwareStepDetectorService"
             android:stopWithTask="false" />
     </application>
 
